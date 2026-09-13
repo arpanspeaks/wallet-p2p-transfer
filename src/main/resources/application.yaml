@@ -1,3 +1,15 @@
 spring:
   application:
     name: wallet-service
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/paytm_wallet}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres} # I have hardcoded this value for local development
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+wallet:
+  initial-balance-paise: ${WALLET_INITIAL_BALANCE_PAISE:100000}
