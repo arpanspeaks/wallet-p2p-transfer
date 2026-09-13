@@ -26,3 +26,6 @@ management:
         http.server.requests: true
 wallet:
   initial-balance-paise: ${WALLET_INITIAL_BALANCE_PAISE:100000}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
